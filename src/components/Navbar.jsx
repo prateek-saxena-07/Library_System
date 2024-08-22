@@ -1,5 +1,6 @@
 function Navbar()
 {
     return (<>
-    <p>This is Navbar</p></>)
+        <p>This is Navbar.</p>
+    </>)
 }

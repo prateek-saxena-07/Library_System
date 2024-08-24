@@ -12,6 +12,7 @@ function Home() {
         </ul>
 
         <ul><Link to="/PopularBooks">Popular Books <br />
+            <img src="https://variety.com/wp-content/uploads/2022/11/Sonic-Frontiers.jpg" alt="" height="250px" />
     </Link>
 
         </ul>

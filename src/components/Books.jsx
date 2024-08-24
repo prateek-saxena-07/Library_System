@@ -1,10 +1,19 @@
-export  function Books(props)
+import { Link } from "react-router-dom"
+export function Books(props)
 {
-    const {title,description,genre}=props.details
+    const { title, description, category, img } = props.details
+    const { params }=props
+
+
     return (<>
-        <p>Name:{title}</p>
+        <Link to={`/BrowseBooks/${params}/${title}`}> <p>Name:{title}</p></Link>
+        
         <p>Description:{description}</p>
-        <p>Category:{genre[0]},{genre[1]}</p>
+        <p>Category:{category}</p>
+        <img src={img} alt="" />
         <hr />
+
+
+
     </>)
 }

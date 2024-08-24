@@ -7,8 +7,10 @@ import Home from './components/Home.jsx'
 import App from './App.jsx'
 import PopularBooks from './components/PopularBooks.jsx'
 import BookCategory from './components/BookCategory.jsx'
+import BookDetails from './components/BookDetails.jsx'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import './index.css'
+
 
 
 const appRouter = createBrowserRouter([
@@ -31,7 +33,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: '/BrowseBooks/:category',
-        element:<BookCategory/>
+        element:<BookCategory/>  
+      },
+      {
+        path: '/BrowseBooks/:category/:title',
+        element:<BookDetails/>
       },
       {
         path: '/PopularBooks',

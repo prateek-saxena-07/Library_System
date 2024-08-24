@@ -12,7 +12,7 @@ function Home() {
         </ul>
 
         <ul><Link to="/PopularBooks">Popular Books <br />
-        <img src="https://i.scdn.co/image/ab67616d0000b2734c8f092adc59b4bf4212389d" alt="" height='200px' width='100px'/></Link>
+    </Link>
 
         </ul>
     

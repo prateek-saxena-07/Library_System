@@ -5,12 +5,14 @@ const data = [
       "A science fiction epic about a desert planet and its political intrigue.",
     category: "sciFi",
     image: "https://example.com/images/dune.jpg",
+    rating: 5,
   },
   {
     title: "The Catcher in the Rye",
     description: "A novel about teenage angst and alienation.",
     category: "fiction",
     image: "https://example.com/images/catcher-in-the-rye.jpg",
+    rating: 4,
   },
   {
     title: "Sapiens",
@@ -18,6 +20,7 @@ const data = [
       "A brief history of humankind, exploring the evolution of Homo sapiens.",
     category: "nonFiction",
     image: "https://example.com/images/sapiens.jpg",
+    rating: 5,
   },
   {
     title: "It",
@@ -25,18 +28,21 @@ const data = [
       "A horror novel about a group of friends confronting a malevolent entity.",
     category: "horror",
     image: "https://example.com/images/it.jpg",
+    rating: 4,
   },
   {
     title: "The Hobbit",
     description: "A fantasy adventure story about a hobbit's quest.",
     category: "fiction",
     image: "https://example.com/images/the-hobbit.jpg",
+    rating: 5,
   },
   {
     title: "1984",
     description: "A dystopian novel about totalitarianism and surveillance.",
     category: "sciFi",
     image: "https://example.com/images/1984.jpg",
+    rating: 5,
   },
   {
     title: "Becoming",
@@ -44,6 +50,7 @@ const data = [
       "A memoir by Michelle Obama, reflecting on her life and experiences.",
     category: "nonFiction",
     image: "https://example.com/images/becoming.jpg",
+    rating: 4,
   },
   {
     title: "The Shining",
@@ -51,6 +58,7 @@ const data = [
       "A horror novel about a haunted hotel and the madness it induces.",
     category: "horror",
     image: "https://example.com/images/the-shining.jpg",
+    rating: 5,
   },
   {
     title: "Neuromancer",
@@ -58,12 +66,14 @@ const data = [
       "A cyberpunk classic involving hackers and artificial intelligence.",
     category: "sciFi",
     image: "https://example.com/images/neuromancer.jpg",
+    rating: 4,
   },
   {
     title: "Pride and Prejudice",
     description: "A classic novel about love, class, and social expectations.",
     category: "fiction",
     image: "https://example.com/images/pride-and-prejudice.jpg",
+    rating: 5,
   },
   {
     title: "Educated",
@@ -71,12 +81,14 @@ const data = [
       "A memoir about a woman's quest for knowledge despite a troubled upbringing.",
     category: "nonFiction",
     image: "https://example.com/images/educated.jpg",
+    rating: 4,
   },
   {
     title: "Dracula",
     description: "A classic horror novel about the vampire count Dracula.",
     category: "horror",
     image: "https://example.com/images/dracula.jpg",
+    rating: 5,
   },
   {
     title: "Foundation",
@@ -84,12 +96,14 @@ const data = [
       "A science fiction saga about the fall and rise of civilizations.",
     category: "sciFi",
     image: "https://example.com/images/foundation.jpg",
+    rating: 4,
   },
   {
     title: "To Kill a Mockingbird",
     description: "A novel about racial injustice and moral growth.",
     category: "fiction",
     image: "https://example.com/images/to-kill-a-mockingbird.jpg",
+    rating: 5,
   },
   {
     title: "The Immortal Life of Henrietta Lacks",
@@ -97,6 +111,7 @@ const data = [
       "The story of Henrietta Lacks and the immortal cells taken from her.",
     category: "nonFiction",
     image: "https://example.com/images/the-immortal-life.jpg",
+    rating: 4,
   },
   {
     title: "The Exorcist",
@@ -104,6 +119,7 @@ const data = [
       "A horror novel about a young girl possessed by a demonic entity.",
     category: "horror",
     image: "https://example.com/images/the-exorcist.jpg",
+    rating: 5,
   },
   {
     title: "The Left Hand of Darkness",
@@ -111,6 +127,7 @@ const data = [
       "A science fiction novel exploring gender and politics on a distant planet.",
     category: "sciFi",
     image: "https://example.com/images/left-hand-of-darkness.jpg",
+    rating: 4,
   },
   {
     title: "The Great Gatsby",
@@ -118,12 +135,14 @@ const data = [
       "A classic novel about wealth and the American Dream in the 1920s.",
     category: "fiction",
     image: "https://example.com/images/great-gatsby.jpg",
+    rating: 5,
   },
   {
     title: "Thinking, Fast and Slow",
     description: "A book on the dual systems of thought and decision-making.",
     category: "nonFiction",
     image: "https://example.com/images/thinking-fast-and-slow.jpg",
+    rating: 5,
   },
   {
     title: "American Psycho",
@@ -131,6 +150,7 @@ const data = [
       "A psychological thriller and horror novel about a wealthy New York City businessman.",
     category: "horror",
     image: "https://example.com/images/american-psycho.jpg",
+    rating: 4,
   },
   {
     title: "Snow Crash",
@@ -138,6 +158,7 @@ const data = [
       "A cyberpunk novel set in a future America with a dangerous virtual reality.",
     category: "sciFi",
     image: "https://example.com/images/snow-crash.jpg",
+    rating: 5,
   },
   {
     title: "One Hundred Years of Solitude",
@@ -145,6 +166,7 @@ const data = [
       "A novel about the Buendía family and the magical town of Macondo.",
     category: "fiction",
     image: "https://example.com/images/one-hundred-years-of-solitude.jpg",
+    rating: 4,
   },
   {
     title: "The Wright Brothers",
@@ -152,6 +174,7 @@ const data = [
       "A biography of the Wright brothers and their invention of the airplane.",
     category: "nonFiction",
     image: "https://example.com/images/the-wright-brothers.jpg",
+    rating: 4,
   },
   {
     title: "The Haunting of Hill House",
@@ -159,12 +182,14 @@ const data = [
       "A horror novel about a group of people staying in a supposedly haunted house.",
     category: "horror",
     image: "https://example.com/images/the-haunting-of-hill-house.jpg",
+    rating: 5,
   },
   {
     title: "The Martian",
     description: "A science fiction novel about an astronaut stranded on Mars.",
     category: "sciFi",
     image: "https://example.com/images/the-martian.jpg",
+    rating: 5,
   },
   {
     title: "Little Women",
@@ -172,12 +197,14 @@ const data = [
       "A classic novel about the lives and struggles of the March sisters.",
     category: "fiction",
     image: "https://example.com/images/little-women.jpg",
+    rating: 5,
   },
   {
     title: "The Gene: An Intimate History",
     description: "A book exploring the history and science of genetics.",
     category: "nonFiction",
     image: "https://example.com/images/the-gene.jpg",
+    rating: 4,
   },
   {
     title: "The Silence of the Lambs",
@@ -185,6 +212,7 @@ const data = [
       "A psychological horror novel about an FBI agent and a cannibalistic serial killer.",
     category: "horror",
     image: "https://example.com/images/silence-of-the-lambs.jpg",
+    rating: 5,
   },
   {
     title: "Hyperion",
@@ -192,6 +220,7 @@ const data = [
       "A science fiction novel featuring a group of pilgrims on a journey in a distant future.",
     category: "sciFi",
     image: "https://example.com/images/hyperion.jpg",
+    rating: 4,
   },
   {
     title: "Brave New World",
@@ -199,6 +228,7 @@ const data = [
       "A dystopian novel about a future society driven by technology and consumerism.",
     category: "sciFi",
     image: "https://example.com/images/brave-new-world.jpg",
+    rating: 5,
   },
   {
     title: "Gone with the Wind",
@@ -206,6 +236,7 @@ const data = [
       "A historical novel set during the American Civil War and Reconstruction era.",
     category: "fiction",
     image: "https://example.com/images/gone-with-the-wind.jpg",
+    rating: 4,
   },
   {
     title: "The Power of Habit",
@@ -213,6 +244,7 @@ const data = [
       "A book exploring the science of habits and how they can be changed.",
     category: "nonFiction",
     image: "https://example.com/images/the-power-of-habit.jpg",
+    rating: 4,
   },
   {
     title: "Bird Box",
@@ -220,6 +252,7 @@ const data = [
       "A horror novel about a mother and her children trying to survive in a world where seeing an unknown entity drives people to madness.",
     category: "horror",
     image: "https://example.com/images/bird-box.jpg",
+    rating: 5,
   },
 ];
 

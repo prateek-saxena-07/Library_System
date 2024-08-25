@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Books } from './Books';
 import { useState } from 'react';
+// import '../App.css'
 
 function BrowseBooks() {
     const books = useSelector((state) => state.books);
@@ -25,6 +26,33 @@ function BrowseBooks() {
 
     return (
         <>
+            
+        
+           
+            <h1 style={{ padding: '35px' }}>Browse by Category</h1>
+           <hr />
+            <div className="category">
+  <Link to={`/BrowseBooks/fiction`}>
+    <img src="https://picsum.photos/200/300?random=45" alt="" />
+    <span>Fiction</span>
+  </Link>
+  <Link to={`/BrowseBooks/nonFiction`}>
+    <img src="https://picsum.photos/200/300?random=46" alt="" />
+    <span>Non-Fiction</span>
+  </Link>
+  <Link to={`/BrowseBooks/horror`}>
+    <img src="https://picsum.photos/200/300?random=47" alt="" />
+    <span>Horror</span>
+  </Link>
+  <Link to={`/BrowseBooks/sciFi`}>
+    <img src="https://picsum.photos/200/300?random=48" alt="" />
+    <span>Sci-Fi</span>
+  </Link>
+</div>
+
+            <hr />
+            <br />
+            <br />
             <input 
                 type="text" 
                 placeholder="Search by title" 
@@ -32,26 +60,18 @@ function BrowseBooks() {
                 onChange={(e) => setSearchText(e.target.value)} 
             />
             <button onClick={handleSearch}>Search</button>
-            <br />
-            {searchResult && (
+             {searchResult && (
                 <div>
                     <h3>Searched Book</h3>
                     <Books key={searchResult.id} details={searchResult} />
                 </div>
             )}
             {searchMessage && <p>{searchMessage}</p>}
-            <h1>Browse by Category</h1>
-            {/* add image to each link according to category */}
-            <Link to={`/BrowseBooks/fiction`}>Fiction</Link>
-            <Link to={`/BrowseBooks/nonFiction`}>Non-Fiction</Link>
-            <Link to={`/BrowseBooks/horror`}>Horror</Link>
-            <Link to={`/BrowseBooks/sciFi`}>Sci-Fi</Link>
-            <hr />
-            <br />
-            <h2>All Books</h2>
-            {books.map((b) => (
-                <Books key={b.id} details={b} />
-            ))}
+            <div className="bookcontainer">
+                {books.map((b) => (
+                    <Books key={b.id} details={b} />
+                ))}
+            </div>
         </>
     );
 }

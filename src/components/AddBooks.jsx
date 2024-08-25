@@ -34,35 +34,37 @@ function AddBooks() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label>Title</label>
-                <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-            </div>
-            <div>
-                <label>Description</label>
-                <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
-            </div>
-            <div>
-                <label>Category</label>
-                <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                    <option value="fiction">Fiction</option>
-                    <option value="nonFiction">Non-Fiction</option>
-                    <option value="horror">Horror</option>
-                    <option value="sciFi">Sci-Fi</option>
-                </select>
-            </div>
-            <div>
-                <label>Image URL</label>
-                <input type="text" value={image} onChange={(e) => setImage(e.target.value)} />
-            </div>
-            <div>
-                <label>Rating</label>
-                <input type="number" min="1" max="5" value={rating} onChange={(e) => setRating(e.target.value)} />
-            </div>
-            {error && <p>{error}</p>}
-            <button type="submit">Add Book</button>
-        </form>
+        <div className="formcontainer">
+            <form onSubmit={handleSubmit}>
+                <div >
+                    <label>Title</label>
+                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+                </div>
+                <div>
+                    <label>Description</label>
+                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
+                </div>
+                <div>
+                    <label>Category</label>
+                    <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                        <option value="fiction">Fiction</option>
+                        <option value="nonFiction">Non-Fiction</option>
+                        <option value="horror">Horror</option>
+                        <option value="sciFi">Sci-Fi</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Image URL</label>
+                    <input type="text" value={image} onChange={(e) => setImage(e.target.value)} />
+                </div>
+                <div>
+                    <label>Rating</label>
+                    <input type="number" min="1" max="5" value={rating} onChange={(e) => setRating(e.target.value)} />
+                </div>
+                {error && <p>{error}</p>}
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
     );
 }
 

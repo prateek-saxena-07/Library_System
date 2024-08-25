@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import data from "../utils/mockdata";
 import { Books } from "./Books";
 import { useParams } from "react-router-dom"
+// import '../App.css'
 
 export default function BookCategory()
 { const [Category, setCategory] = useState({
@@ -32,10 +33,12 @@ useEffect(()=>{ const sortedCategory = {
     const bookSelect = Category[params];
     return (<>
         <h1>{params}</h1>
-        {bookSelect.map((book) => {
-            return <><Books details={book}></Books> </>
-        })}
-        sorting
+        <div className="bookcontainer">
+            {bookSelect.map((book) => {
+                return <><Books details={book}></Books> </>
+            })}
+        </div>
+        
     </>)
 }  
 

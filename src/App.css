@@ -5,38 +5,269 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+
+
+
+
+/* Category Container */
+.category {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust spacing between items as needed */
+  padding: 20px; /* Add padding around the container */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Individual Link Style */
+.category a {
+  text-align: center; /* Center align the text below the image */
+  display: block;
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Set text color */
+  width: 200px; /* Set a fixed width for consistency */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Image Style */
+.category img {
+  width: 100%; /* Make images responsive and fill the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
 }
 
-.card {
-  padding: 2em;
+/* Text Style */
+.category a span {
+  display: block;
+  margin-top: 10px; /* Space between image and text */
+  font-size: 16px; /* Adjust font size as needed */
+  font-weight: bold; /* Optional: Make text bold */
+}
+.bookcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
 }
 
-.read-the-docs {
-  color: #888;
+.book{
+  margin: 10px;  
+  border: 4px solid black;
+}
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make the navbar take full width */
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 1000; /* Ensure the navbar stays on top of other content */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 4px;
+    }
+}
+
+
+/* Home.css */
+
+.home-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    
+}
+
+.home-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.genre-list, .popular-books {
+    list-style-type: none;
+    padding: 0;
+}
+
+.genre-list li {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.popular-books {
+    margin-top: 20px;
+}
+
+.popular-books img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.popular-books img:hover {
+    transform: scale(1.05);
+}
+
+.link-text {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.link-text:hover {
+    color: #0056b3;
+}
+
+/* AddBooks.css */
+form {
+  
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="number"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align:center ;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.formcontainer
+{
+  margin-top: 20px;
+}
+
+/* BookDetail.css */
+.book-detail {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #111111;
+}
+
+.book-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.book-detail p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.book-detail .rating {
+  font-size: 24px;
+  color: #ffcc00;
+}
+
+.book-detail a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.book-detail a:hover {
+  text-decoration: underline;
+}
+
+.book-detail hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
 }

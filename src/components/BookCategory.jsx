@@ -11,7 +11,7 @@ const params=useParams().category
    
 useEffect(()=>{ const sortedCategory = {
         fiction: data.filter(book => book.category ==='fiction'  ),
-        nonFiction:data.filter(book => book.category === 'nonfiction'  ),
+        nonFiction:data.filter(book => book.category === 'nonFiction'  ),
         horror:data.filter(book => book.category === 'horror' ),
         sciFi:data.filter(book => book.category === 'sciFi'),
     }
@@ -31,7 +31,7 @@ useEffect(()=>{ const sortedCategory = {
 // Bracket Notation: When you need to access a property dynamically (i.e., when the property name is stored in a variable), you use bracket notation. In this case, the syntax Category[params] is correct because params holds the name of the property you want to access.
     const bookSelect = Category[params];
     return (<>
-        
+        <h1>{params}</h1>
         {bookSelect.map((book) => {
             return <><Books details={book}></Books> </>
         })}

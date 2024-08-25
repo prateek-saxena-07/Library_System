@@ -6,11 +6,13 @@ export function Books(props)
 
 
     return (<>
-        <Link to={`/BrowseBooks/${category}/${title}`}> <p>Name:{title}</p></Link>
         
+        <p>Name:{title}</p>
         {/* <p>Description:{description}</p> */}
         <p>Category:{category}</p>
         <img src={img} alt="" />
+
+        <Link to={`/BrowseBooks/${category}/${title}`}> View Details</Link>
         <hr />
 
 

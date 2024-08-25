@@ -41,6 +41,7 @@ function BrowseBooks() {
             )}
             {searchMessage && <p>{searchMessage}</p>}
             <h1>Browse by Category</h1>
+            {/* add image to each link according to category */}
             <Link to={`/BrowseBooks/fiction`}>Fiction</Link>
             <Link to={`/BrowseBooks/nonFiction`}>Non-Fiction</Link>
             <Link to={`/BrowseBooks/horror`}>Horror</Link>

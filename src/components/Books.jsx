@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 export function Books(props)
 {
-    const { title,category, img } = props.details
+    const { title,category, image:img } = props.details
     
 
 

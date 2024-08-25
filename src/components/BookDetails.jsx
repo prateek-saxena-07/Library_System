@@ -1,21 +1,24 @@
-import { useParams } from "react-router-dom"
-import {useState, useEffect } from 'react'
-import data from '../utils/mockdata'
-import BookDetail from "./BookDetail"
-export default function ()
-{
-    const [pick, setPick] = useState([])
-    const params=useParams()
-    console.log(useParams().title)
-    console.log('dta',data)
-    useEffect(() => { 
-        const Picked = data.find((p) => p.title.toLowerCase() === params.title.toLowerCase())
-        setPick(Picked);
-        }
-    , [])
-    console.log("pick",pick)
-    return (<>
-    <BookDetail detail={pick}></BookDetail></>)
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux"; // Import useSelector to access Redux state
+import BookDetail from "./BookDetail";
+
+export default function BookDetails() {
+  const [pick, setPick] = useState(null);
+  const params = useParams();
+  
+  // Access the books state from Redux store
+  const books = useSelector((state) => state.books);
+
+  useEffect(() => {
+    const Picked = books.find((p) => p.title.toLowerCase() === params.title.toLowerCase());
+    setPick(Picked);
+  }, [params.title, books]); // Adding dependencies to useEffect
+
+  return (
+    <>
+      {pick ? <BookDetail detail={pick} /> : <p>Book not found</p>}
+    </>
+  );
 }
-// this current component will sort particular book of which detail has to render
-// and make one more component to render the book detail of that single  book that has been picked here 
+

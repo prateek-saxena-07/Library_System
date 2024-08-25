@@ -1,5 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { store } from './utils/store.js';
+import { Provider } from 'react-redux';
 import Error from './components/Error.jsx'
 import AddBooks from './components/AddBooks.jsx'
 import BrowseBooks from './components/BrowseBooks.jsx'
@@ -51,6 +53,8 @@ const appRouter = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={appRouter}></RouterProvider>
+   <Provider store={store}>
+      <RouterProvider router={appRouter} />
+    </Provider>
   </StrictMode>,
 )

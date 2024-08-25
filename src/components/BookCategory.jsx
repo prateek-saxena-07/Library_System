@@ -10,10 +10,10 @@ export default function BookCategory()
 const params=useParams().category
    
 useEffect(()=>{ const sortedCategory = {
-        fiction: data.filter(book => book.category ==='Fiction'  ),
-        nonFiction:data.filter(book => book.category === 'Non-Fiction'  ),
-        horror:data.filter(book => book.category === 'Horror' ),
-        sciFi:data.filter(book => book.category === 'Sci-Fi'),
+        fiction: data.filter(book => book.category ==='fiction'  ),
+        nonFiction:data.filter(book => book.category === 'nonfiction'  ),
+        horror:data.filter(book => book.category === 'horror' ),
+        sciFi:data.filter(book => book.category === 'sciFi'),
     }
     
     setCategory(sortedCategory);}
@@ -33,7 +33,7 @@ useEffect(()=>{ const sortedCategory = {
     return (<>
         
         {bookSelect.map((book) => {
-            return <><Books details={book} params={params}></Books> </>
+            return <><Books details={book}></Books> </>
         })}
         sorting
     </>)

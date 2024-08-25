@@ -42,7 +42,7 @@ const appRouter = createBrowserRouter([
       {
         path: '/PopularBooks',
         element:<PopularBooks/>
-      }
+      },
       
     ]
     

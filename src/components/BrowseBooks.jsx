@@ -1,88 +1,65 @@
 import { useState, useEffect } from "react";
 import { Books } from "./Books";
 import { Link } from "react-router-dom";
-
 import data from "../utils/mockdata";
 
 
-
 function BrowseBooks() {
-    const [Book, setBook] = useState([]);
+    const [book, setBook] = useState([]);
+    const [searchText, setSearchText] = useState("");
+    const [searchResult, setSearchResult] = useState(null);
+    const [searchMessage, setSearchMessage] = useState("");
   
-
-
-
-    // const Fetching = async () => {
-    //     try {
-    //         const response = await fetch('https://freetestapi.com/api/v1/books');
-    //         const data = await response.json();
-    //         console.log('Fetched Books:', data); // Log the fetched books
-    //         const sortedBooks = categorizeBooks(data);
-    //         console.log('Sorted Books:', sortedBooks); // Log the sorted books
-    //         setCategory(sortedBooks);
-    //         setBook(data);
-    //     } catch (error) {
-    //         console.error('Error fetching books:', error);
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     Fetching();
-    // }, []);
-
-    // const categorizeBooks = (books) => {
-    //     const sortedBooks = { fiction: [], nonFiction: [], horror: [], scifi: [], uncategorized: [], };
-    //     books.forEach(book => {
-    //         const category = categorizeBook(book).toLowerCase();
-    //         console.log(`Book: ${book.title}, Category: ${category}`); // Log each book and its category
-    //         sortedBooks[category].push(book);
-            
-    //     });
-
-    //     return sortedBooks;
-    // };
-
-    // const normalizeGenre = (genre) => genre.toLowerCase();
-
-    // const categorizeBook = (book) => {
-    //     const fictionCategories = ['fiction', 'classic', 'romance', 'adventure', 'historical fiction', 'social commentary', 'philosophical fiction', 'satire', 'children\'s literature', 'magical realism', 'war'];
-    //     const horrorCategories = ['horror', 'gothic'];
-    //     const sciFiCategories = ['science fiction', 'dystopian'];
-    //     const nonFictionCategories = ['non-fiction', 'biography', 'memoir', 'self-help', 'true crime'];
-
-    //     const normalizedGenres = book.genre.map(normalizeGenre);
-    //     console.log(`Normalized Genres for ${book.title}:`, normalizedGenres);
-
-    //     if (normalizedGenres.some(genre => fictionCategories.includes(genre))) return 'Fiction';
-    //     if (normalizedGenres.some(genre => horrorCategories.includes(genre))) return 'Horror';
-    //     if (normalizedGenres.some(genre => sciFiCategories.includes(genre))) return 'SciFi';
-    //     if (normalizedGenres.some(genre => nonFictionCategories.includes(genre))) return 'NonFiction';
-    //     return 'Uncategorized';
-    // };
-
-
     
-    // console.log('Category State:', category); // Log the category state
+    useEffect(() => {
+        setBook(data);
+    }, []);
 
+    const handleSearch = () => {
+        const foundBook = book.find((b) => 
+            b.title.toLowerCase() === searchText.toLowerCase()
+        );
 
-console.log("data",data[0].category)
-
+        if (foundBook) {
+            setSearchResult(foundBook);
+            setSearchMessage("");
+        } else {
+            setSearchResult(null);
+            setSearchMessage("Book not found");
+        }
+    };
 
     return (
         <>
-            <input type="text" placeholder="Search by title" />
+            <input 
+                type="text" 
+                placeholder="Search by title" 
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)} 
+            />
+            <button onClick={handleSearch}>Search</button>
             <br />
-            <h1>Browse by Category</h1>
-            {/* {Book.map((book) => <Books key={book.id} details={book} />)} */}
-            {/* Imp mapping data to the component */}
-            {/* {console.log("category name",Object.keys(category)[0])} */}
-            
+             {searchResult && (
+                <div>
+                    <h3>Searched Book</h3>
+                    <Books key={searchResult.id} details={searchResult}  />
+                </div>
+            )}
 
+            {searchMessage && <p>{searchMessage}</p>}
+            <h1>Browse by Category</h1>
             <Link to={`/BrowseBooks/fiction`}>Fiction </Link>
             <Link to={`/BrowseBooks/nonFiction`}> Non-Fiction</Link>
             <Link to={`/BrowseBooks/horror`}> Horror</Link>
             <Link to={`/BrowseBooks/sciFi`}> Sci-fi</Link>
-            
+            <hr />
+            <br />
+            <h2>All Books</h2>
+            {book.map((b) => (
+                <Books key={b.id} details={b} />
+            ))}
+
+           
         </>
     );
 }

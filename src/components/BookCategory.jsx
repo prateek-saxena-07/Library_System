@@ -22,11 +22,9 @@ useEffect(()=>{ const sortedCategory = {
     , [])
 
 
-    // console.log(params.category)
-    // console.log(Object.keys(category))
-    // console.log("params",params)
+   
     console.log("particular category", Category[params])
-    // console.log("particular category", Category.params)
+    
     //imp  ==>When you write Category.params, JavaScript looks for a property called params within the Category object. Since there is no params property, the result is undefined.
 //     Bracket Notation for Objects: In JavaScript, objects are collections of key-value pairs, where each key is a unique identifier (property) associated with a value. When you want to access a property of an object, you can use dot notation (e.g., object.property) if you know the property name at the time of writing the code.
 

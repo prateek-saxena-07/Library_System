@@ -11,7 +11,7 @@ export function Books(props)
         <div className="book">
             <p>Name:{title}</p>
             <p>Category:{category}</p>
-            <img src={img} alt="" />
+            <img src={img} alt="" height="200px" width="200px"/>
             <br />
             <Link to={`/BrowseBooks/${category}/${title}`}> View Details</Link>
         </div>

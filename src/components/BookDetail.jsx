@@ -9,7 +9,7 @@ export default function BookDetail(props) {
             <p><strong>Description:</strong> {description}</p>
             <p><strong>Category:</strong> {category}</p>
             <p><strong>Author:</strong> {author}</p>
-            <img src={image} alt={`${title} cover`} />
+            <img src={image} alt={`${title} cover`} height="100px" width="100px"/>
             <p className="rating">Rating &nbsp;{stars}</p>
             <hr />
             <Link to='/BrowseBooks'>Back To Browse</Link>

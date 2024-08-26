@@ -9,6 +9,7 @@ function AddBooks() {
     const [category, setCategory] = useState('fiction');
     const [image, setImage] = useState('');
     const [rating, setRating] = useState(1);
+    const [author,setAuthor]=useState('')
     const [error, setError] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -27,6 +28,7 @@ function AddBooks() {
             category,
             image,
             rating,
+            author,
         };
 
         dispatch(addBook(newBook));
@@ -43,6 +45,10 @@ function AddBooks() {
                 <div>
                     <label>Description</label>
                     <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
+                </div>
+                <div>
+                    <label>Author</label>
+                    <input type='text' value={author} onChange={(e) => setAuthor(e.target.value)} />
                 </div>
                 <div>
                     <label>Category</label>

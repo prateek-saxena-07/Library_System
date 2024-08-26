@@ -7,7 +7,7 @@ function Home() {
             <h1 className="home-title">Welcome to the Library</h1>
 
             <ul className="genre-list">
-                <h2>Genres in this Library</h2>
+                <h2>Genres in this Library to Browse</h2>
                 <li>Fiction</li>
                 <li>Non-Fiction</li>
                 <li>Horror</li>

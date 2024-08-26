@@ -6,6 +6,7 @@ const data = [
     category: "sciFi",
     image: "https://picsum.photos/200/300?random=1",
     rating: 5,
+    author: "Frank Herbert",
   },
   {
     title: "The Catcher in the Rye",
@@ -13,6 +14,7 @@ const data = [
     category: "fiction",
     image: "https://picsum.photos/200/300?random=2",
     rating: 4,
+    author: "J.D. Salinger",
   },
   {
     title: "Sapiens",
@@ -21,6 +23,7 @@ const data = [
     category: "nonFiction",
     image: "https://picsum.photos/200/300?random=3",
     rating: 5,
+    author: "Yuval Noah Harari",
   },
   {
     title: "It",
@@ -29,6 +32,7 @@ const data = [
     category: "horror",
     image: "https://picsum.photos/200/300?random=4",
     rating: 4,
+    author: "Stephen King",
   },
   {
     title: "The Hobbit",
@@ -36,6 +40,7 @@ const data = [
     category: "fiction",
     image: "https://picsum.photos/200/300?random=5",
     rating: 5,
+    author: "J.R.R. Tolkien",
   },
   {
     title: "1984",
@@ -43,6 +48,7 @@ const data = [
     category: "sciFi",
     image: "https://picsum.photos/200/300?random=6",
     rating: 5,
+    author: "George Orwell",
   },
   {
     title: "Becoming",
@@ -51,6 +57,7 @@ const data = [
     category: "nonFiction",
     image: "https://picsum.photos/200/300?random=7",
     rating: 4,
+    author: "Michelle Obama",
   },
   {
     title: "The Shining",
@@ -59,6 +66,7 @@ const data = [
     category: "horror",
     image: "https://picsum.photos/200/300?random=8",
     rating: 5,
+    author: "Stephen King",
   },
   {
     title: "Neuromancer",
@@ -67,6 +75,7 @@ const data = [
     category: "sciFi",
     image: "https://picsum.photos/200/300?random=9",
     rating: 4,
+    author: "William Gibson",
   },
   {
     title: "Pride and Prejudice",
@@ -74,6 +83,7 @@ const data = [
     category: "fiction",
     image: "https://picsum.photos/200/300?random=10",
     rating: 5,
+    author: "Jane Austen",
   },
   {
     title: "Educated",
@@ -82,6 +92,7 @@ const data = [
     category: "nonFiction",
     image: "https://picsum.photos/200/300?random=11",
     rating: 4,
+    author: "Tara Westover",
   },
   {
     title: "Dracula",
@@ -89,6 +100,7 @@ const data = [
     category: "horror",
     image: "https://picsum.photos/200/300?random=12",
     rating: 5,
+    author: "Bram Stoker",
   },
   {
     title: "Foundation",
@@ -97,6 +109,7 @@ const data = [
     category: "sciFi",
     image: "https://picsum.photos/200/300?random=13",
     rating: 4,
+    author: "Isaac Asimov",
   },
   {
     title: "To Kill a Mockingbird",
@@ -104,6 +117,7 @@ const data = [
     category: "fiction",
     image: "https://picsum.photos/200/300?random=14",
     rating: 5,
+    author: "Harper Lee",
   },
   {
     title: "The Immortal Life of Henrietta Lacks",
@@ -112,6 +126,7 @@ const data = [
     category: "nonFiction",
     image: "https://picsum.photos/200/300?random=15",
     rating: 4,
+    author: "Rebecca Skloot",
   },
   {
     title: "The Exorcist",
@@ -120,6 +135,7 @@ const data = [
     category: "horror",
     image: "https://picsum.photos/200/300?random=16",
     rating: 5,
+    author: "William Peter Blatty",
   },
   {
     title: "The Left Hand of Darkness",
@@ -128,6 +144,7 @@ const data = [
     category: "sciFi",
     image: "https://picsum.photos/200/300?random=17",
     rating: 4,
+    author: "Ursula K. Le Guin",
   },
   {
     title: "The Great Gatsby",
@@ -136,6 +153,7 @@ const data = [
     category: "fiction",
     image: "https://picsum.photos/200/300?random=18",
     rating: 5,
+    author: "F. Scott Fitzgerald",
   },
   {
     title: "Thinking, Fast and Slow",
@@ -143,6 +161,7 @@ const data = [
     category: "nonFiction",
     image: "https://picsum.photos/200/300?random=19",
     rating: 5,
+    author: "Daniel Kahneman",
   },
   {
     title: "American Psycho",
@@ -151,6 +170,7 @@ const data = [
     category: "horror",
     image: "https://picsum.photos/200/300?random=20",
     rating: 4,
+    author: "Bret Easton Ellis",
   },
   {
     title: "Snow Crash",
@@ -159,6 +179,7 @@ const data = [
     category: "sciFi",
     image: "https://picsum.photos/200/300?random=21",
     rating: 5,
+    author: "Neal Stephenson",
   },
   {
     title: "One Hundred Years of Solitude",
@@ -167,6 +188,7 @@ const data = [
     category: "fiction",
     image: "https://picsum.photos/200/300?random=22",
     rating: 4,
+    author: "Gabriel García Márquez",
   },
   {
     title: "The Wright Brothers",
@@ -175,6 +197,7 @@ const data = [
     category: "nonFiction",
     image: "https://picsum.photos/200/300?random=23",
     rating: 4,
+    author: "David McCullough",
   },
   {
     title: "The Haunting of Hill House",
@@ -183,6 +206,7 @@ const data = [
     category: "horror",
     image: "https://picsum.photos/200/300?random=24",
     rating: 5,
+    author: "Shirley Jackson",
   },
   {
     title: "The Martian",
@@ -190,6 +214,7 @@ const data = [
     category: "sciFi",
     image: "https://picsum.photos/200/300?random=25",
     rating: 5,
+    author: "Andy Weir",
   },
   {
     title: "Little Women",
@@ -198,6 +223,7 @@ const data = [
     category: "fiction",
     image: "https://picsum.photos/200/300?random=26",
     rating: 5,
+    author: "Louisa May Alcott",
   },
   {
     title: "The Gene: An Intimate History",
@@ -205,6 +231,7 @@ const data = [
     category: "nonFiction",
     image: "https://picsum.photos/200/300?random=27",
     rating: 4,
+    author: "Siddhartha Mukherjee",
   },
   {
     title: "The Silence of the Lambs",
@@ -213,6 +240,7 @@ const data = [
     category: "horror",
     image: "https://picsum.photos/200/300?random=28",
     rating: 5,
+    author: "Thomas Harris",
   },
   {
     title: "Hyperion",
@@ -221,40 +249,36 @@ const data = [
     category: "sciFi",
     image: "https://picsum.photos/200/300?random=29",
     rating: 4,
+    author: "Dan Simmons",
   },
   {
-    title: "Brave New World",
-    description:
-      "A dystopian novel about a future society driven by technology and consumerism.",
-    category: "sciFi",
+    title: "Jane Eyre",
+    description: "A novel about the life and struggles of an orphaned girl.",
+    category: "fiction",
     image: "https://picsum.photos/200/300?random=30",
     rating: 5,
-  },
-  {
-    title: "Gone with the Wind",
-    description:
-      "A historical novel set during the American Civil War and Reconstruction era.",
-    category: "fiction",
-    image: "https://picsum.photos/200/300?random=31",
-    rating: 4,
+    author: "Charlotte Brontë",
   },
   {
     title: "The Power of Habit",
     description:
       "A book exploring the science of habits and how they can be changed.",
     category: "nonFiction",
-    image: "https://picsum.photos/200/300?random=32",
+    image: "https://picsum.photos/200/300?random=31",
     rating: 4,
+    author: "Charles Duhigg",
   },
   {
-    title: "Bird Box",
+    title: "Carrie",
     description:
-      "A horror novel about a mother and her children trying to survive in a world where seeing an unknown entity drives people to madness.",
+      "A horror novel about a bullied high school girl with telekinetic powers.",
     category: "horror",
-    image: "https://picsum.photos/200/300?random=33",
+    image: "https://picsum.photos/200/300?random=32",
     rating: 5,
+    author: "Stephen King",
   },
 ];
+
 
 export default data;
 

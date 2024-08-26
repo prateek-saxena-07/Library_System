@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import data from "../utils/mockdata";
 import { Books } from "./Books";
 import { useParams } from "react-router-dom"
-// import '../App.css'
+import { titleCase } from "title-case";
+
 
 export default function BookCategory()
 { const [Category, setCategory] = useState({
@@ -32,10 +33,14 @@ useEffect(()=>{ const sortedCategory = {
 // Bracket Notation: When you need to access a property dynamically (i.e., when the property name is stored in a variable), you use bracket notation. In this case, the syntax Category[params] is correct because params holds the name of the property you want to access.
     const bookSelect = Category[params];
     return (<>
-        <h1>{params}</h1>
+        <br />
+        <br />
+        <u>
+            <h1>{titleCase(params)}</h1>
+        </u>
         <div className="bookcontainer">
             {bookSelect.map((book) => {
-                return <><Books details={book}></Books> </>
+                return <><Books details={book} ></Books> </>
             })}
         </div>
         

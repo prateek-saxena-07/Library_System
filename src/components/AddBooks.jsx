@@ -17,7 +17,7 @@ function AddBooks() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!title || !description || !category || !image||author) {
+        if (!title || !description || !category || !image|| !author) {
             setError('All fields are required');
             return;
         }
